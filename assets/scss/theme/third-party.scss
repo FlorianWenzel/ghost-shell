@@ -1,3 +1,18 @@
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
    ========================================================================== */
+.tag-chip {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 16px;
+  background-color: #e0e0e0; /* You can adjust this to your preferred color */
+  text-decoration: none;
+  color: #333; /* Adjust text color if needed */
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.tag-chip:hover {
+  background-color: #bdbdbd;
+}
