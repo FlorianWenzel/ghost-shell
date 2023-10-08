@@ -1,14 +1,29 @@
 name: Deploy Theme
+
 on:
   push:
     branches:
       - master
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies and Run Zip
+        run: |
+          npm install
+          npm run zip
+
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
